@@ -1,9 +1,4 @@
 <?php
-# @Date:   2019-10-22T17:10:24+01:00
-# @Last modified time: 2019-10-23T11:33:50+01:00
-
-
-
 
 use Illuminate\Database\Seeder;
 use App\Role;

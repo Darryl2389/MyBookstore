@@ -23,17 +23,18 @@ class UsersTableSeeder extends Seeder
 
       $admin = new User();
       $admin->name = 'Darryl Sullivan';
-      $admin->email = 'admin@mybookstore.ie';
+      $admin->email = 'admin@reserveit.ie';
       $admin->password = bcrypt('secret');
       $admin->save();
       $admin->roles()->attach($role_admin);
 
       $user = new User();
       $user->name = 'Darryl Sullivan';
-      $user->email = 'darryls@mybookstore.ie';
+      $user->email = 'darryls@reserveit.ie';
       $user->password = bcrypt('secret');
       $user->save();
       $user->roles()->attach($role_user);
+
 
     }
 }

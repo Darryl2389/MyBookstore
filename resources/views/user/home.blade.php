@@ -1,6 +1,5 @@
 @extends('layouts.app')
-# @Date:   2019-10-24T09:29:06+01:00
-# @Last modified time: 2019-11-05T12:40:18+00:00
+
 
 
 
@@ -14,7 +13,7 @@
 
                 <div class="card-body">
 
-                  <p>Welcome to My Bookstore!📚<a href="{{ route('user.books.index')}}">Books</a></p>
+                  <p>Welcome to Reserve It!<a href="{{ route('user.reservations.index')}}">Reservations</a></p>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -22,6 +21,12 @@
                     @endif
 
                     You are logged in as an ordinary user!
+
+                  <br>
+                    Hi {{Auth::user()->name}}
+                  <br>
+                  Email:{{Auth::user()->email}}
+
                 </div>
             </div>
         </div>

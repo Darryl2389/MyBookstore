@@ -1,6 +1,4 @@
 <?php
-# @Date:   2019-10-22T15:38:37+01:00
-# @Last modified time: 2019-10-30T12:43:04+00:00
 
 
 
@@ -25,13 +23,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/home', 'Admin\HomeController@index')->name('admin.home');
 Route::get('/user/home', 'User\HomeController@index')->name('user.home');
 
-Route::get('/admin/books', 'Admin\BookController@index')->name('admin.books.index');
-Route::get('/admin/books/create', 'Admin\BookController@create')->name('admin.books.create');
-Route::get('/admin/books/{id}', 'Admin\BookController@show')->name('admin.books.show');
-Route::post('/admin/books/store', 'Admin\BookController@store')->name('admin.books.store');
-Route::get('/admin/store/{id}/edit', 'Admin\BookController@edit')->name('admin.books.edit');
-Route::put('/admin/books/{id}', 'Admin\BookController@update')->name('admin.books.update');
-Route::delete('/admin/books/{id}/destroy', 'Admin\BookController@destroy')->name('admin.books.destroy');
+Route::get('/admin/reservations', 'Admin\ReservationController@index')->name('admin.reservations.index');
+Route::get('/admin/reservations/create', 'Admin\ReservationController@create')->name('admin.reservations.create');
+Route::get('/admin/reservations/{id}', 'Admin\ReservationController@show')->name('admin.reservations.show');
+Route::post('/admin/reservations/store', 'Admin\ReservationController@store')->name('admin.reservations.store');
+Route::get('/admin/store/{id}/edit', 'Admin\ReservationController@edit')->name('admin.reservations.edit');
+Route::put('/admin/reservations/{id}', 'Admin\ReservationController@update')->name('admin.reservations.update');
+Route::delete('/admin/reservations/{id}/destroy', 'Admin\ReservationController@destroy')->name('admin.reservations.destroy');
 
-Route::get('/user/books', 'User\BookController@index')->name('user.books.index');
-Route::get('/user/books/{id}', 'User\BookController@show')->name('user.books.show');
+Route::get('/user/reservations', 'User\ReservationController@index')->name('user.reservations.index');
+Route::get('/user/reservations/{id}', 'User\ReservationController@show')->name('user.reservations.show');
+
+Route::get('/user/restaurants', 'User\RestaurantController@welcome')->name('user.restaurants.welcome');
+Route::get('/user/restaurants/{id}', 'User\RestaurantController@show')->name('user.restaurants.show');
